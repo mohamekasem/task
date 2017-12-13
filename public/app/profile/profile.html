@@ -1,0 +1,13 @@
+<div>
+    <img src="{{user.profilePic}}" class="img-responsive"/>
+    <h1>Welcome {{user.name}}</h1>
+    <button class="btn btn-primary">Change Password</button>
+    <div class="alert alert-success" role="alert" ng-hide="newPasswordMode">
+  <strong>Well done!</strong> You successfully chang the password.
+</div>
+    <div ng-show="newPasswordMode">
+        <label for="newPassword">New Password</label>
+        <input type="password" id="newPassword" ng-model="Profile.password" placeholder="New Password" class="form-control">
+        <button class="btn" ng-click="Profile.updatePass() = true">Change</button>
+    </div>
+</div>
